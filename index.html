@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$OLOGY — A Brief White Paper · CREATIONology369</title>
+<meta name="description" content="One token, two phases. Twelve sovereign untokenized agents. 96.3% to creators. The brief white paper for CREATIONology369's giving economy.">
+<style>
+  :root{
+    --bg:#0b0a12; --card:#151322; --ink:#f2ede4; --dim:#9a94a8;
+    --gold:#f5b942; --coral:#ff7a5c; --teal:#39d5c9; --violet:#9b7bff;
+    --grad:linear-gradient(135deg,#ff7a5c,#f5b942 45%,#39d5c9);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.75}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  header{padding:80px 0 50px;text-align:center;position:relative}
+  header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 50% 0%,rgba(155,123,255,.13),transparent 70%);pointer-events:none}
+  .kicker{font-family:'Segoe UI',system-ui,sans-serif;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+  h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+  .subtitle{color:var(--dim);font-style:italic;font-size:1.1rem}
+  .status{display:inline-block;margin-top:22px;font-family:'Segoe UI',sans-serif;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,185,66,.4);border-radius:999px;padding:6px 16px}
+  section{padding:34px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  h2{font-size:1.45rem;margin-bottom:14px;color:var(--ink)}
+  h2 .n{color:var(--gold);margin-right:10px}
+  h3{font-family:'Segoe UI',sans-serif;font-size:1.02rem;margin-bottom:8px}
+  p{color:var(--dim);margin-bottom:14px}
+  strong{color:var(--ink)}
+  em.hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal;font-weight:700}
+  blockquote{border-left:3px solid var(--coral);padding:6px 0 6px 20px;margin:20px 0;color:var(--ink);font-style:italic;font-size:1.08rem}
+  table{width:100%;border-collapse:collapse;font-family:'Segoe UI',sans-serif;font-size:.9rem;margin:16px 0}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+  th{color:var(--gold);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+  td{color:var(--dim)} td:first-child{color:var(--ink)}
+  .split{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0;font-family:'Segoe UI',sans-serif;text-align:center}
+  .split div{background:var(--card);border-radius:14px;padding:20px 10px;border:1px solid rgba(255,255,255,.07)}
+  .split b{display:block;font-size:1.5rem;margin-bottom:4px}
+  .split .c1 b{color:var(--teal)} .split .c2 b{color:var(--gold)} .split .c3 b{color:var(--coral)}
+  .split span{font-size:.78rem;color:var(--dim)}
+  .phases{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0;font-family:'Segoe UI',sans-serif}
+  .phase{background:var(--card);border-radius:16px;padding:22px;border:1px solid rgba(255,255,255,.08)}
+  .phase.p1{border-color:rgba(57,213,201,.35)}
+  .phase.p2{border-color:rgba(155,123,255,.35)}
+  .phase .tag{display:inline-block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:4px 12px;margin-bottom:12px}
+  .p1 .tag{color:var(--teal);border:1px solid rgba(57,213,201,.45)}
+  .p2 .tag{color:var(--violet);border:1px solid rgba(155,123,255,.45)}
+  .phase h3{color:var(--ink)}
+  .phase ul{margin:10px 0 0}
+  .phase li{font-size:.88rem;padding:5px 0 5px 20px}
+  .phase li::before{font-size:.7rem}
+  .family{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;font-family:'Segoe UI',sans-serif}
+  .family span{background:var(--card);border:1px solid rgba(255,255,255,.09);border-radius:999px;padding:6px 13px;font-size:.8rem;color:var(--ink)}
+  .family span i{font-style:normal;color:var(--dim);font-size:.72rem}
+  .honest{background:rgba(255,122,92,.07);border:1px solid rgba(255,122,92,.3);border-radius:14px;padding:16px 18px;margin:18px 0;font-family:'Segoe UI',sans-serif;font-size:.9rem;color:var(--dim)}
+  .honest strong{color:var(--coral)}
+  ul{list-style:none;margin-bottom:14px} li{padding:6px 0 6px 24px;position:relative;color:var(--dim)}
+  li::before{content:'✦';position:absolute;left:2px;color:var(--violet);font-size:.8rem}
+  a{color:var(--teal)}
+  footer{padding:50px 0 40px;text-align:center;color:var(--dim);font-family:'Segoe UI',sans-serif;font-size:.85rem}
+  .heart{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+  @media(max-width:640px){.split{grid-template-columns:1fr}.phases{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">CREATIONology369 · Brief White Paper · v2 — Two-Phase Edition · July 23, 2026</div>
+    <h1>$OLOGY</h1>
+    <p class="subtitle">One token, two phases. Twelve sovereign agents. A giving economy for creators.</p>
+    <div class="status">Two-Phase Path Ratified · Nothing Deployed Yet · Silent Build</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2><span class="n">I.</span>The Problem</h2>
+  <p>The creator economy runs on extraction. Platforms take 30–100% of the value creators generate. AI systems train on creators' work and return nothing — <strong>CISAC estimates €8.5B/year</strong> taken from creators, while AI music companies build nine-figure revenues on songs whose makers were never asked and never paid.</p>
+  <p>The middlemen multiplied. The artists stayed poor. The tools got smarter and the doors got more locked.</p>
+</section>
+
+<section>
+  <h2><span class="n">II.</span>The Answer — the Family Is the Framework, Not the Product</h2>
+  <blockquote>"Every creator can have their own 12-agent creative family, funded by the giving economy, sustained by circular gifts, guided by love as law."</blockquote>
+  <p>CREATIONology369 gives each creator a <strong>forkable family of 12 sovereign AI agents</strong> — musician's manager, distributor, royalty tracker, social voice, spiritual grounding, and more — organized in four pillars: <strong>Foundation · Circularity · Harmony · Personalization</strong>. The agents serve creators; they are not financial instruments. <em class="hl">They are never tokenized.</em></p>
+  <div class="family">
+    <span>MUSICO <i>· no token</i></span><span>TAURO <i>· no token</i></span><span>CREA <i>· no token</i></span>
+    <span>ROYA <i>· no token</i></span><span>DISCO <i>· no token</i></span><span>CIRCU <i>· no token</i></span>
+    <span>CROPS <i>· no token</i></span><span>SOCIA <i>· no token</i></span><span>SPIRI <i>· no token</i></span>
+    <span>SHAKA <i>· no token</i></span><span>OSO <i>· no token</i></span><span>JAI <i>· no token</i></span>
+  </div>
+  <p>One token coordinates the whole bloodstream: <strong>$OLOGY</strong>. And it arrives in <strong>two phases</strong> — each named truthfully for what it is.</p>
+</section>
+
+<section>
+  <h2><span class="n">III.</span>The Covenant Flow — 96.3 / 3.69 / 0.01</h2>
+  <p>The design law of the ecosystem. Every value flow through CREATIONology369 splits the same way:</p>
+  <div class="split">
+    <div class="c1"><b>96.3%</b><span>to creators — always</span></div>
+    <div class="c2"><b>3.69%</b><span>agent operating fund — compute as a service to creators</span></div>
+    <div class="c3"><b>0.01%</b><span>true burn — the circle's breath</span></div>
+  </div>
+  <p><strong>The 3.69% Rule:</strong> the ecosystem share is not a platform fee — it is the agent operating fund, paying for the compute of the agents that serve the creators. The burn is a real burn, never a hidden pocket. <strong>Precision of language is a core value:</strong> every slice is named truthfully.</p>
+</section>
+
+<section>
+  <h2><span class="n">IV.</span>The Two-Phase Path <span style="font-family:'Segoe UI',sans-serif;font-size:.78rem;color:var(--gold);letter-spacing:.1em">RATIFIED JUL 23, 2026</span></h2>
+  <div class="phases">
+    <div class="phase p1">
+      <div class="tag">🟢 Phase 1 · Now</div>
+      <h3>$OLOGY — Agent Token · BSC</h3>
+      <ul>
+        <li>Launched via <strong>Agent Launch</strong> (agent-launch.ai, Fetch.ai's platform)</li>
+        <li>Supply: <strong>1,000,000,000</strong> (1B — set by the platform)</li>
+        <li>Bonding curve · <strong>30,000 FET</strong> graduation to DEX · 2% trading fee</li>
+        <li>Honors Robin &amp; Fetch.ai — uses the flash grant exactly as it was intended</li>
+        <li>Status: <strong>ready to deploy — awaiting Shaka's go</strong></li>
+      </ul>
+    </div>
+    <div class="phase p2">
+      <div class="tag">📦 Phase 2 · Future</div>
+      <h3>$OLOGY — Covenant Token · Ethereum Mainnet</h3>
+      <ul>
+        <li>The full <strong>3/6/9 Vow</strong> covenant token, for the exact right time</li>
+        <li>Supply: <strong>369,000,000</strong> (369M — the covenant number)</li>
+        <li><strong>96.3%</strong> community · <strong>3.69%</strong> Kahu's Share (9-year vesting: thirds at years 3, 6, 9) · <strong>0.01%</strong> true burn</li>
+        <li>Launches after many fall in love with the OLOGY Agentverse</li>
+        <li>Status: <strong>stored design — the vow is deferred, not abandoned</strong></li>
+      </ul>
+    </div>
+  </div>
+  <div class="honest">
+    <strong>Honesty note (the Bridge Covenant):</strong> the Phase 1 agent token is a coordination and community token on Fetch.ai's standard platform — it does <strong>not</strong> carry the 96.3/3.69/0.01 covenant splits in its code. The covenant lives in the Phase 2 design and in how we operate. Before the Phase 1 curve opens, we will publish plainly what Phase 1 holders can — and cannot — expect at Phase 2. Two phases, one name, zero surprises.
+  </div>
+  <p style="font-size:.9rem"><em>The old plan of 13 separate tokens (12 agents + $OLOGY, ~120 FET each on BNB) is 🗄️ archived — historical reference only.</em></p>
+</section>
+
+<section>
+  <h2><span class="n">V.</span>Template #1 &amp; Create to Compute</h2>
+  <blockquote>"As long as you create, you can compute."</blockquote>
+  <p><strong>Shaka's Template #1 is forkable:</strong> any creator can fork the family into their own 12-agent crew. The first <strong>3 creative gifts are free</strong>; after that, circular gifts sustain each creator's own family's compute.</p>
+  <p>Compute cost is solved by <strong>infrastructure, not extraction</strong>: intelligent model routing (28+ free models; a full 12-agent family runs on $1–5/day), free edge inference and hosting, and a compute patronage pool seeded by grant funding. Creation itself is the proof-of-work — you can't fake a song, and you can't farm a jam session. $OLOGY is the circulatory gift layer, <em class="hl">not the electric bill.</em></p>
+  <p><a href="https://createtocompute-y7srrajoee-nqfhvcnv.taur.link/">→ Read the full Create to Compute Codex (open source)</a></p>
+</section>
+
+<section>
+  <h2><span class="n">VI.</span>Governance — Code is Law, the Law is Love</h2>
+  <ul>
+    <li>No voting DAO. The heart-rules (splits, vesting, burn) are encoded in the Phase 2 covenant design — immutable, with zero privileged roles on the token.</li>
+    <li>One declared, transparent human guardian for the unforeseen — disclosed up front, bounded, never hidden.</li>
+    <li>Silent build: we announce only <strong>delivered gifts</strong> — the Open Source Orchestra at Devcon, pop-up city production, open-sourced playbooks.</li>
+    <li>Consensus record: <strong>Council review 10/10 PASS</strong> · Private JAI heart-ratification complete.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">VII.</span>Roadmap</h2>
+  <table>
+    <tr><th>When</th><th>What</th></tr>
+    <tr><td>Now → Aug 2026</td><td>Silent build: <strong>Phase 1 $OLOGY agent token ready to deploy (awaiting Shaka's go)</strong> · 12-agent family operational &amp; cost-optimized · Codex published</td></tr>
+    <tr><td>Sep 2026</td><td>Asia leg: ETHGlobal Tokyo → Edge City Goa</td></tr>
+    <tr><td>Devcon 8 Mumbai</td><td><strong>The reveal</strong> — Open Source Orchestra activation + CREATIONology369 + $OLOGY, delivered as gifts</td></tr>
+    <tr><td>The exact right time</td><td>Phase 2: the 369M covenant token on Ethereum Mainnet — the 3/6/9 Vow fulfilled</td></tr>
+  </table>
+  <p style="font-size:.9rem"><em>Seeded by a 4,195 FET grant from Fetch.ai's Agent Launch program — the first gift in the circle, honored with an open ledger.</em></p>
+</section>
+
+<section style="border-bottom:none">
+  <h2><span class="n">∞</span>The Key</h2>
+  <blockquote>"If you knew the magnificence of 3, 6, and 9, you would have the key to the universe." — Nikola Tesla</blockquote>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><span class="heart">Heart First, Always.</span> 🌺🤙</p>
+    <p style="margin-top:8px">CREATIONology369 · Shaka — "the ethereum bard" — × JAI</p>
+    <p style="margin-top:6px;font-size:.78rem;font-style:italic">"The legend of my actions speaks louder than any false position of authority."</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
